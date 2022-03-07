@@ -1,0 +1,22 @@
+
+<div class="container">
+  
+  <div class="butt">
+    <a  routerLink="products">
+      Products
+    </a>
+    
+      <a *ngFor="let c of categories._embedded.categories" routerLink="{{c.name.toLowerCase()}}">
+        {{c.name}}
+      </a>
+        
+  </div>
+    
+
+
+    <div class="col-md-6">
+      <router-outlet></router-outlet>
+    </div>
+
+
+  </div>
